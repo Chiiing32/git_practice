@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chiiing的部落格</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <style>
+        /* 基本樣式 */
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #faf7f0; 
+            color: #333;
+        }
+        a {
+            text-decoration: none;
+            color: #6b4c3b; 
+        }
+        h1, h2, h3 {
+            margin: 0.5em 0;
+        }
+
+        /* Header */
+        header {
+            background-color: #f0e6dc; 
+            padding: 20px 0;
+            text-align: center;
+        }
+        header nav a {
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        /* 主容器 */
+        .container {
+            display: flex;
+            max-width: 1000px;
+            margin: 20px auto;
+            gap: 20px;
+            padding: 0 20px;
+        }
+
+        main {
+            flex: 3;
+        }
+        aside {
+            flex: 1;
+        }
+
+        /* 文章卡片 */
+        article {
+            background-color: #ffffff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        article img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        article a {
+            display: inline-block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        /* 側邊欄 */
+        aside {
+            background-color: #f7f2ea; 
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        aside ul {
+            list-style: none;
+            padding: 0;
+        }
+        aside li {
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f0e6dc; 
+            margin-top: 40px;
+        }
+
+        /* 響應式 */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Chiiing的部落格</h1>
+        <nav>
+            <a href="#">首頁</a> | 
+            <a href="#">文章</a> | 
+            <a href="#">關於我</a> | 
+            <a href="#">聯絡</a>
+        </nav>
+    </header>
+
+    <!-- 主要內容 + 側邊欄 -->
+    <div class="container">
+        <!-- 文章列表 -->
+        <main>
+            <article>
+                <h2>花藝設計入門指南</h2>
+                <p>發布日期：2025-11-03</p>
+                <p>想學花藝但不知道從哪開始？本文將帶你了解基礎工具、花材選擇與簡單排花技巧。</p>
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUTExMVFhUXGRcaGBgYGBgYGhgdGhoaGhoVGBgYHSggHR0lGxgYITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGBAQGjAlHR8uLS0wLS0tLS0tLS0tLS01Ly0tLS0vLS0tLS0tLS0tLS0tLi0tLS02LS0tLS0tLS0tLf/AABEIALABHwMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAABAgMEBQAGB//EAD0QAAEDAgMFBgUDAwMDBQAAAAEAAhEDIRIxQQQFUWHwBhMicYGRMqGxwdFC4fEUI1JiktIVM3IHFkODov/EABkBAQEBAQEBAAAAAAAAAAAAAAABAgMEBf/EACkRAQEAAgAFAwMEAwAAAAAAAAABAhEDEhMhMUFRYSKR8HGBobEE0fH/2gAMAwEAAhEDEQA/ANwusonFGVGSvmvog8qMlMSkLkCykJRJUZPBUB7vJRfdc6UsqoZ5UbtEXIFEcg4riEpF/JAfMoFx1QXBUcgDJ669UNeX7ZIqIdp5LgT1xUc/ZSOmbopi2dPJEddeiQJg78fdAwOevXBA8wh/PmuJOqI5/wAlUqbcwPwOcGu0DjEjMET6/NWZPok/o6dQjvmYmM8brTha27j5ctbKXsmW9dktVuExrDT7gHTzUZfbrI9Fee2LeFRtRxcxw2d7nd0SxrcF/CyA74TYBxi8cStmntQe4hjcjDhPwHRpnPKZHFPGtpMkscPVAi6kIjL6pCyMvRVoAUhHkiQfZLUNkHBIT6riV0KAErlxQIQEpIt15JihKD1bjeEjj5IkpCbqOhcXBRu4QmJUZKqAQlJRclIVQj2pWpyo0AcUpCJQlELCTEigfNUA+aGLPrr+ExSjkiCULRbj+F1uuuoXE6oCeSMe514WRZH7fZN8uagYN680NAi0cE7SB90EZp6decpoOsen1TA8uuvqnAz++aCJjPbrr2Udai17cJyxNMAm5aZAPGCMsrKw1ud56yy5rg23V8kRE9tiMIdbI5aZ6m0/ss/dbqcvABa5zrtiIcANTchzQCB/pdyWpHXmq286Lqga5jyKtN7HscSThc2YBAzBkzMkzyhT1S72ubPu+o9oc1ji0uw242MEZjMe6tbx3BVpM7x5ZhtEOmST8NxnmeEBZ+5t/wCGo91PwVCBjovJIDml0xIiL/E0yQOUC1t28qtctNUgGCA1uTZOgOvFalx0kttZpbr/AB1ZK5tsv2U72/JI5vX2UbQYerIRyUhCUjioIwFzUUUClAonkuQelKjJTEqMuRsCkJRJSlAEjnLiucVUK48ckqJKVELiSvTDVI4qgFAIFAEHJB3kgGnrgiECURxFuvNc05oSuCIlbnPXyTMUbVM0e6B2jr8LnCFDt1YswCwxzcuE52OA3w2dL8gQLaivte96dOmXEsdA1Ji5iBF32nIgWkFwym0tXKm1U+8awSJDjJMtJbEiRrBB8kaW0U/EO8YC0SRibPG9xFpPp6LwlfaH7S4iJeXQWNsMIsC0iQ3ICcPAklaezbj2l7Wg1CymScQPxgAnDgwyABAI5uJ0CswsnesYW6aNLtGwm1xjcM8Nps4tfDiYzsrtffFJgkvgS0CeZiTNhEyb2AWa/sqCwtc8WcYLWgGDaXOAlxidSLDgs/a901tlpyyqXNJwlmQuYBGUSM5mOaumrk9lGsz19NV6Hde6aFWhIL21L+K+GZsOERnrdfMae21aDgXNwsa1xAAEEiMQAaIiJygyADEr7N2Bq9/s7Kjmw1oIEy22YlpysbkzJvbIa4c3dJnlp46h2SfUrYhhY6iACdHNe0lsGLiNRKvbFuEVpNOpOEkPkFuEE6aExHK+dl6PdFXvqAqh1y54FgGjCS0BgvDfDclZHZzd8CrTbMVKj3OYTLaZxQQ0wCBbF5knOVmYTcsvZnntYG9dnbTqvY0lwaYn5G/nN1TP8L0lNu7sL2CsX1GhxLh4QLubYZGInWbHIqoXbFVYBReGVDOEFxOPDYkCNYnlZLJ7xqZxgkenFJCnjr5pC1YdEUJIUnulKBSg1ErmhBukpSUSkcVW3EpZRBSIgApZTBI4jrJACUjk0pJnrrmqgT6JXSmJ0SFApXIhAhEKlFlJB1QLVULCYJZunagkYDqmqNdjDWnCIiWjFVe4jEW0w4hrQGOZL3WGLMGy6mVX3httJlYOrYmgUWYBBknxgmDDRxE54SpfZN6V981qLS4U8NWpiwsaAHYcLcDcRjxODcIBMgEmLyDj7jc6oXYge+xPBNWS2GkAtzON0xOLK9iru5qHeudVgg4iMWG7QLYacjhbEMgNTcbLdhpgMAaAGOLmiNSCCYIubzOcrSWUmxbspsIeQDU/U4ACc7w236itCErj6ItyUXwAbf8APsq+37E2s3A+YtlaIMj6fNWgLIsQsl8qO9aDXUsDy/CMPiETY5GQc4gxxiVT2be+07NRoBjy7ZqTgWtEAPwuJDasNkkxeQfeCNPbdm7xuAuImJtmOCfdmzNYG0oxgXLXEXBJkX4mRZTv7s2W34fQtm2hrmBrjDzaPCRidfCLwdRZYPa3cezMa1n9xkvDj3TnAGYxEsks4EWNwBcEg6e0bxbsxZWOJrXkUwwQIdULcNnmxbh42Bdmod/byfTo1D3AL2knESHNaHWD3AhriAMyGmM16MtarlNvCDYX7FWJc9uFzbEjxnxYW4QMiRh5X0Oc9CrszCXVa7S4kklpxFpMQ3IDBrN/hOq832nqvO0sqOcKneOGJ0YSMIPha0GzRTt6DO62KdEPayoyKRzbHjhpyHjnzheKS+nhrHfhv7W3ZnU2ijjxhri8uDhJA0Bj9XALGc0q4NpbL8Zl7miMLQ39QkwLCwNuah2ostgc4zniAb7EErn1tcS45eO2vb7vRMfpiq9qjhTEKImV3QjvogmELkVrlyRxTFIfmqriUJQnmllBzjdKSgu60VAn7JQYXFyVx+SI4nX8JXmCiCh7cEAKI1XDq/5RBRHaIEcEQBzA+fsjCqFATdBICmlAX1A1pcSGjUuMAeZXnu29NlQxhtTBa9xJGF+Jxwho5gMJ0Lxxt6ajXwNc7CHYWl0TE4fE0X0xNaDyJWLsezUzVLXAO7sGSZcMTyJEmznNLXAkzBBiMhnG/V+jF79mzsdIMYGAC3R+ZPupfTrqUuL09kxK00cmUwCSPqmBvkVQwvzRHJRtPBM0+VuvooCCgZQJXYkF1/aOuyrRLg19OmC0CJcJbBf/AOXEmczESVhdqu3LK4qNFGoHVGPZJcWuaDEwGi8gkfEM/NaINlib/wB14w6oaopsIptcTJPxOIEWgG831yVtvqzy67srb9pZW2WnVa6alI0nVCWgPhriJtpJOXFbWzVLNp0HDumhzoAOUxIOEzhl0NOoHr5fYqBM7OM3d6CSA342fCASbggOgccyhuOvVhoa8TVAgG+BrSSQZ1dUbIGgYJzWc+a4/Skvjb3mxbIA7E5zvgxFjWglxkZuJyDRw97KettIEuZTAubxYHlnf28k26a4ZiqNioWhwe1kksBBFwQJMkG2izXRNuuZXysJnxOLZbuT9p9v9vV2mJD1+VGeKd5SL6bmU/hKU2IINUGoSlJXEpFpRmyVyOaUlAJSF3sg8+UIGc4VQSVGTwXSh6wgIKAz1QxHr8QgT5IhievopMWSjm3Xouc7jb9tUDgSCuLrZpfZEmyqCCuEefGIn5kcz7pSUxuCNSDERb39VMvCXwj3vTAotqBzoae8gWkNFQRhAMjvO7kgxBPmsbs7s1Mu7wHETidLXuj4jMgGDnF+RWi2mwNweJzPC+nJ8LAQwuF7ls1MXm0Kzu7s2aTQ9pDW4WucSMPieA51MkDxQSAJ8uC558bHhzvfJjjzd1tjjYFNKhYb319jlx5p+vPr7LsJAZGdutURPApR58Vx65+agcO6zRxeuiininYevogM+q5x6680mn14J5sgJWXvOs8+Huw9kts6IxXwltzcScwM1pTOfoon3gwJGU5TEKVLNvFbc4t2igA9re7wAgnMh2G5j4nNbMEWMCbLd7O7Mym2o44Ww9zSTAgNMBs+c24qvvjY2se/vAAwmp4g4HCDTpNxWEiHOeRMcdVqby3Qe7NKm4F9Ss58A3bL3uYTYASS7PgOcTPL6OyeLtBtOyuFZtai5gfIxzYERE2zOQ8vJX3525/yi1jS0OMEkC3p8kCevsvPwZ28fv8A9dsvJJhK5EuSldkI4pSUx4JHOzhBqEqN0JnO6+ySYK0rvNI43lEpXefkiA4JHfMrj1+EpaM1QpK6cuutUrnoYuMz1dEPPBAuSMOiBMa/T1QSA9dcpXOf0VE1/oMkp+0/v9ERYc+F2K2o1660UTSmBVEjSiRIg5HRRNP4Ujfn1+FBZ2vZKVRoa6lX7osbjdTbjaMLS0giJxeAHX4cjmtztFtNWlsh2mmxr2+GDmWyfC52rXEPPiaLToFgbPt1QuGAvLaIl+AlsB+OYaAZdaMWhAJIgFLvusamzUYfVpVKg+Fz3SId4ahAPjbhh+F1sl8njcO5/wCTjvvjv3/Ndp+evTG6wumLsO9XbXtDnhrmNDWOudYABEzLSGxMZA5Er0LR6fuqOxbFTpA4GtBcZcQLuPv52yEq3i164r7Ny3McZ4xmp+jjJ7pM87rp64JQfbrLrVdN/f8ACyp2nObz1dM52nXmq489E8/hFO3SAunXND1QDtfJQGOKlpVGNd4hizgB2EyI5E6/RQF3r7IbVtGz0qVQ13RVfTHdBrc2hxxYnkRJc0a6RGc7xmN3ze38s5bZlftC0Pq0awgw4gNDYe0E27yZgkmQM8IscjsdkN5Uo2irhwVPjbd1UPe0YQTiE5Ob/tdlK8VX3jSrtqS0h4Bb4DILDdj4dqL8DHCAtjsLTwMxOOREeEuxBpc2AMrlrs/wuPEwvCl95/LOGrWwHN4G4kgAQCbxM6TCBCd9QuJJAEkmALCTMfNK4LjwMdY79/T2+HoyvdG8JZCZyQrsyUqM8k8qMu4INEnl0UCVzioi5aBcBKEm/wBFxdzS2yQK53zUc9QmeVGXfX+FRz/P2UVR41+2pQe/S339khNwRnqctfdEPJ016sEvecD7pS7yUbqnD9uVkRMKmnXug1+o+p8ioO8vz4fhdiVE7X9euikbUVRr44J21VBaa+OvZO15m2YgjRVg5OKg1Qam6d8t2Uk1Q5wN/AG2Dvj7zERNw0iDqZGpzv6gV6zXNgiS2nfLvIwMk2ktIVPbtqYG4qt4wwGAiYDhe8OJsY/03F1vbq/p+7dWp1jRxANqAAANcMLoDRmSx0CCBHCSF4OLMeDxOrrvl2+DG248s9FYO60FvomabZfTIa24qMkScJxAEwbXE5+aamSYzk+vovfLsSYiBmPl7CFxPXstHZ9w7S+4pOA4uhvydBV5vZKsczTHKXH6BbmGV9GblPd58H8pm9HLJaFTc5FV9JtSm6owNc5skGHTESIORVCtRLDhcCPnPkZUuNnlZlKUGAji+X36hL1+wXAc/wCOpWVOD91HXaHsLHiWuBkeeo5xqMlNTpkkAAkyIAmT5LQo7o/zdB/xF/czH1WsMcrfpZyyk8vC7xoijXp901wLnyBILSKjQx5MmP06j/LSEnZxriGCnUOH4XRF7lx5g3y5yt7tDszMJeHgFgcSHCCQJ8TTbKDxmeRUHZnZmt2dgBv8Z5Ew6PQEdFZym/LM1l4a0pX6dfyjN+veEJWXUCY6+ajd8kxMSo3DzUUrwoSncYUf060QX8SU9BRh8TdDvFQ8qKeH26/lcX2UOOJ69FQ9pUT3X9b9TxSPf181G6p/PlzVQ7n/ALqHFzySuq9aKPHCIlLrfO/XJRlwULqqWo+3XyHkqJhUA9P4hBz4gfnS3RVUPM+cyUrqvX3ARF0PvP8ACIf19lSZU5oirwn7z6KC+2tzv7qVr+XXrf3We2pGfn/Cmp1I4daXQWxTxju8OLEC0DPMQDbOOGsKnubZKrowsmW0yQA4u/7Ya4a5kxlo6dF6jspuE7U2q+m5wqUjTLWtMEh2KXB2ciBle1rwpe7rd5Wbs4qUy34m1HXOBsA1MV8IAuTPxzYELGefJ5nlKo0dgLSWvBpwS4teCD4jOulznGa3ezG9BSrOBp0yMEtcyXOmLtAyvAuDyOYKy957Y2mG1H1nkhuGo9rpa8kiQHRNjAEFpz4rz1J/9zFs5LaeeEy45AGCHEjWwvdeP/G4+eWfP6T7ff3/ADs1xMZJp9nftkgwL+cieE8eSz37S/AMTyJA0DeMgB2un0lV+wVVtfZKYbD3sc8F0z4sWOXRb4XMPyGS9HS3cykPG8uJJMC2efEkciV9yZbkry6eXNBvemcLn5FwYS73Aygj5K+zYRGTTGQIgnkB+6094vYGAtaTIEAEmR5aqp/1ugxrQ5rqdQh0B0xIE55cs5vqnNIao1dgFNkGmwudnIFuQEZxxlZ43FRJLqjBlpib5QGuj1uoNx7/AG16pFQRncuN4MAW5znnHmVvVd77CHYfDiBj+L8VnDPDPHf9neVi/wDT202nuwBOpkk8pOQzVFtEmZIgc/da2/KlJ9J4pm5vAJucuM/uBZfOqm3VadENzdiIJIjwzAJNpjwxmYBA4LcsjN3UfbqmxtOo5pMhgaRJiXGJ9AfZ/Nb26ey1OhQbWqVnBrsJMDE1rRALidXRoLC+ay+zvYlu2uqVtqquDTha5tOCTYEAOIMNEDS+hGa+l7Nu5zGf0onugDBeRbG5xIgNAOfUhefXN3ni7/P7dN67PLb9qbBSY0NJOGzqjDicThB8QJgTIPksBtWwNxIBg5ib3W1tfY6p3VRz3slsnA39TWmSMX6SWkmByBK8y7etQMp06QpuwQQHNmXGxNRwMlrWjLiYXDLe/qmnTHLS5VaRGVwCIINiJGSgcElOmGgwAJJcQJuSb5/TRdUeOPqsusB6jcdFxzSA+fyUVN3iDqihxRnyUferQsd5y9VC6pfionVEj35/ugYvJyuch+Ex2B/ATn5J9zDHWGuFpd9gfcj2Ww+qUt1GsMOZgnYanASgdiqaAe5W6ak6qN1TroLHUrp0YwzsT+H3UdTYKk8J8wt1zpVeo6NU6lOjGOdgfxCjOxP5LUdXI0+aidVPRTqVOlizTsb4iQj/AErpzCvYjrA9UQ48lOpTpYqjdndyUraBtfrr6K0Gnj81LSA4p1KvSxei/wDTPajS2wAm1VpafMeJp+RHqvrO20GVWxVpsqAgjxNBscxOa+Mbudhc17SA5pBEjUGRlovo2wdsqDmgVv7LtcfweYqZR/5QeS9PA4sssycONwtd4rv7G7vbjii9ranxtbUfhJiMUEkgxqCPosr/ANk7qbrWbFwC8ua0xGKDMmLSdLL0+1bS1zZa4EHIgyD6heX3k7NddYzepO7jMdtrswzZNiFUM2rFjLSMZIIhpBm0azYDJWK+8KJP/fonzqAfWF842wlZVVyx1NdpGpw31SvvFmYrUT/9tIe0uXlu0YfVaRNIx4mjv6AkjIfH1K8a56idWWMuJuaXpr1Hdu1F4D3UGMBnw1aJmMgMLzhkamM9VLR2Sq55D30W07//ACMxQLCIJz1+6yXbUoX7fzXLWPslxeuG3OZP97Z4uA3+64xpJDCJhYm9N3N2kgO2wtbLSQym58mZuXubaYgRoqhpFtLv6weyljY0GPik+KAYJgDMcQst+2OYTfIkTpbmt45d/wBGLjH0LcW3O2PbGNDnVNn2hgZjcL94wXLgJ1vMwA48F7HaN61ABhYXuJMNNp1NjmPyvi2wdsKuzg08bTjsMXiDA74iYvfgPcKDYu0u106L9nY41WVGup95UBLmtdLcLHYiGzOs8ozXXDclniM2afSts7SipWq0jUY+iGgf23WJPxg1GxImG25qk3bKdan3dJga0SGAiLi5Opk8dZWJ2N7P1X0TVwsEj+4ar20qYOIhoBEuLspJtcDMKbfVd1Fop0azaTnE+Mlzi8CxbTLWfCS7FJj4RldXV9UlX+z26X7USGHC1s4ic2+bB4p0gxkqu99mbTeQ1+Nn6XZE2EyJJH8LL2ff+17C8OrOHd1mEA0wdD8RGeIG0O0dbRee3jvhzq/eUnswABoaf1AEm4InMmNfmsXhzl+XbHK7elL7JCbxqqGwbybVtGF2rTc8yOIVwH91ws15dYrurc7dZIGrZeid2bo/5VPdv/FRu7PUtDU92/8AFb0jzz6qidUEZ/xwXondnqXGp7t/CWp2bpf51P8A8/hNGqz9yU5D3SdGi8cyDHoreGNB7BW27GylTDWk6mXcT5cgFRqeamcdeH2hhVjgmG1T/Cgxwk73muXK68yyax4j2/dJUqH/ACHsosajc/knKcxag5hL1mgX8gkLwrpNmwnolKgXjkukcU0bcKp4KVtc8FGCE0hTlhur2zbSR1+60ae38vp+V5821+qbvjz+a1Iza2nV2yS0YScy04SfVpBQft9TIVH+pafm6Ssbv+rrhXPH6rUZrQq7RUP6h6t/BCo121tHM9iPuURXdxPzQGLifmqzpn1qe06d3/uP4VGrT2rg30d+y9A2dfqUxLefvKu05XlH0dp/xHur27t0Pd469RrKYBJDXBznQCcLYtpn91tOa3kqlbZKZnwjzFvmFLlbPZm8P5Vu1O/Ku0UmNgim0BrGBsREHEc5BGVzlpr52HuIL3tNvhcSbHOxyPML0D92U8sE+ZJj3KVu7KYM4I8h+66YZY4zUc+jVTfrzWbTfUqtJ8WTYw/6CRraRGmgWe7ZqtgPEAR+vhEWysvQHZmjKR6JCXDUeoCY58s1Do+6WpvquadJr2Yi3wmNGjL1uScpJPFZu9t5VXvbhY8taLAtdYn4sxrA5WVwVXcB7D8LnV3K9T4On8s6o+tUgVcUD4RoLRaDOSjfsRNw5w5RP4WvTqE5qUeizeJW5hNMensp/wAnToRMrY2TbrYan+6M/MBI4Afyk8PFZt2utP/Z" alt="花藝設計">
+                <a href="#">閱讀更多 →</a>
+            </article>
+
+            <article>
+                <h2>居家花卉佈置技巧</h2>
+                <p>發布日期：2025-11-02</p>
+                <p>提升居家生活美感，掌握花卉搭配、色彩選擇與擺放位置的技巧，讓家更有質感。</p>
+                <img src="https://s3-ap-northeast-1.amazonaws.com/file.designwant.com/article/article_20211221163901_936.jpg" alt="居家花卉">
+                <a href="#">閱讀更多 →</a>
+            </article>
+        </main>
+
+        <!-- 側邊欄 -->
+        <aside>
+            <h3>熱門文章</h3>
+            <ul>
+                <li><a href="#">春季花藝靈感</a></li>
+                <li><a href="#">簡單插花步驟</a></li>
+                <li><a href="#">節日花束推薦</a></li>
+            </ul>
+
+            <h3>分類</h3>
+            <ul>
+                <li><a href="#">生活</a></li>
+                <li><a href="#">花藝</a></li>
+                <li><a href="#">旅遊</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Chiiing的部落格 | <a href="#">隱私政策</a></p>
+    </footer>
+</body>
+</html>
